@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
@@ -18,12 +19,12 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-          <form id="search-form " class="mb-3">
+          <form id="search-form" class="mb-3">
             <div class="row">
               <div class="col-9">
                 <input
                   type="search"
-                  placeholder="Type a city name..."
+                  placeholder="Type a city.."
                   class="form-control"
                   id="city-input"
                   autocomplete="off"
@@ -32,14 +33,14 @@
               <div class="col-3">
                 <input
                   type="submit"
-                  value="search"
+                  value="Search"
                   class="btn btn-primary w-100"
                 />
               </div>
             </div>
           </form>
           <div class="overview">
-            <h1 di="city"></h1>
+            <h1 id="city"></h1>
             <ul>
               <li>Last updated: <span id="date"></span></li>
               <li id="description"></li>
@@ -48,17 +49,20 @@
           <div class="row">
             <div class="col-6">
               <div class="clearfix weather-temperature">
-                <img src="" alt="clear" id="icon" class="float-left" />
+                <img src="" alt="Clear" id="icon" class="float-left" />
                 <div class="float-left">
-                  <strong id="temperature"> </strong>
-                  <span class="units">°C |<a href="#" id="fahrenheit-link">°F</a></span>
+                  <strong id="temperature"></strong
+                  ><span class="units"
+                    ><a href="#" id="celsius-link" class="class">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a></span
+                  >
                 </div>
               </div>
             </div>
             <div class="col-6">
               <ul>
-                <li>Humidity: <span id="humidity">%</span></li>
-                <li>Wind: <span id="wind">Km/h</span></li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
               </ul>
             </div>
           </div>
